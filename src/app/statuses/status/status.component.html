@@ -2,7 +2,10 @@
   <div class="notification m-2 p-2" [ngClass]="setClass()">
     <div class="level">
     <div class="level-left">{{ status.name}}</div>
-      <div class="level-right">{{ status.status}}</div>
+      <div class="level-right">
+        <div class="level-item">  {{ status.status}}</div>
+        <div class="level-item"> {{ status.checkDate.toLocaleTimeString()}} {{ status.checkDate.toLocaleDateString()}}</div>
+      </div>
     </div>
 
   </div>
