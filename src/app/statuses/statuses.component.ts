@@ -14,9 +14,13 @@ export class StatusesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.statusService.getStatuses().subscribe(statusList => {
-      this.statusList=statusList
+    // this.statusService.getStatuses().subscribe(statusList => {
+    //   this.statusList=statusList
+    // })
+    this.statusService.currentList.subscribe(statusList => {
+      this.statusList = statusList
     })
+    this.statusService.updateScope("team1")
   }
 
 }
